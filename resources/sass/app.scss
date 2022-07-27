@@ -6,3 +6,19 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 460px));
+    grid-gap: 10px;
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.cover-letter.form-control {
+    min-height: 300px;
+}

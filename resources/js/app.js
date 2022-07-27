@@ -5,6 +5,7 @@
  */
 
 require('./bootstrap');
+import ClipboardJS from 'clipboard'
 
 window.Vue = require('vue').default;
 
@@ -29,4 +30,18 @@ Vue.component('main-component', require('./components/Main.vue').default);
 
 const app = new Vue({
     el: '#app',
+});
+
+
+
+let buttonsSkill = document.querySelectorAll('.skills__item-button');
+let coverLetter = document.getElementById('coverLetter');
+new ClipboardJS('#btn-to-copy');
+
+buttonsSkill.forEach(button => {
+    button.addEventListener('click', () => {
+        let itemText = button.parentNode.querySelector('.skills__item-text').innerHTML;
+
+        coverLetter.innerHTML += `${itemText}\n\n`
+    })
 });
