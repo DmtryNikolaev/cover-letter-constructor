@@ -4,7 +4,7 @@
 
     <div class="flex-center position-ref full-height">
         <div class="content">
-            <example-component></example-component>
+            <main-component></main-component>
         </div>
     </div>
 
